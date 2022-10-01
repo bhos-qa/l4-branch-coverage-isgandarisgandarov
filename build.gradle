@@ -37,6 +37,6 @@ sonarqube {
         property "sonar.projectKey", "l4-branch-coverage-isgandarisgandarov"
         property "sonar.organization", "bhos-qa"
         property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.qualitygate.wait", true
+//        property "sonar.qualitygate.wait", true
     }
 }
