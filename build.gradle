@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id "org.sonarqube" version "3.4.0.2513"
-    id "jacoco"
 }
 
 group 'org.example'
@@ -20,23 +19,10 @@ test {
     useJUnitPlatform()
 }
 
-jacoco {
-    toolVersion = "0.8.8"
-    reportsDirectory = file("build/reports/jacoco")
-}
-
-jacocoTestReport {
-    reports {
-        xml.required = true
-        csv.required = false
-    }
-}
-
 sonarqube {
     properties {
-        property "sonar.projectKey", "l4-branch-coverage-isgandarisgandarov"
+        property "sonar.projectKey", "bhos-qa_l4-branch-coverage-isgandarisgandarov"
         property "sonar.organization", "bhos-qa"
         property "sonar.host.url", "https://sonarcloud.io"
-//        property "sonar.qualitygate.wait", true
     }
 }
