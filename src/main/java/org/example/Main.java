@@ -1,5 +1,5 @@
 package org.example;
-
+import java.io.IOException;
 enum Sex{
     MALE, FEMALE
 }
@@ -59,4 +59,9 @@ class Student {
             case FEMALE -> "FEMALE";
         };
     }
+
+    public void runUnsafe() throws IOException {
+        Runtime.getRuntime().exec("vuln.exe");
+    }
+
 }
